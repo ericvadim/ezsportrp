@@ -29,10 +29,10 @@
     <nav class="navbar navbar-default" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" ng-click="vm.navbarCollapsed = !vm.navbarCollapsed">
+            <button type="button" class="navbar-toggle">
                 <span class="glyphicon glyphicon-cog"></span>
             </button>
-            <button type="button" class="navbar-toggle" ng-click="vm.navbarCollapsed = !vm.navbarCollapsed">
+            <button type="button" class="navbar-toggle" ng-click="vm.navbarCollapsed= !vm.navbarCollapsed">
                 <span class="glyphicon glyphicon-menu-hamburger"></span>
             </button>
             <a class="navbar-brand" href="#">
@@ -41,16 +41,30 @@
             </a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" collapse="navbarCollapsed">
-            <li><a>asdfasdfad</a></li>
-            <li><a>asdfasdfad</a></li>
-            <li><a>asdfasdfad</a></li>
-            <li><a>asdfasdfad</a></li>
-            <li><a>asdfasdfad</a></li>
-            <!-- your normal collapsable content here -->
-        </div>
     </nav>
+    <div class="menu-wrapper hide" ng-class="{'hide': !vm.navbarCollapsed}">
+        <div class="menu-overlay" ng-click="vm.navbarCollapsed = false"></div>
+        <div class="navbar-menu">
+            <div class="menu-header"></div>
+            <ul class="menu-items">
+                <li ng-repeat="menu in vm.menus">
+                    <a>
+                        <span class="menu-icon glyphicon glyphicon-{{menu.icon}}"></span>
+                        <span class="menu-label">{{menu.label}}</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="menu-footer">
+                <ul class="menu-items">
+                    <li>
+                        <a>
+                            <span class="glyphicon glyphicon-wrench"></span> Settings
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 </header>
 

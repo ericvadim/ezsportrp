@@ -19,7 +19,13 @@ $icon-font-path: "./../assets/fonts/bootstrap/";
 // injector
 // endinjector
 
+$main-color: #294a2b;
+
 html {
+  background: $main-color;
+  body {
+    background: transparent;
+  }
   div, span, button, p, h1, h2, h3, h4, h5, h6, input {
     &:active, &:focus {
       outline: 0 !important;
@@ -151,6 +157,10 @@ html {
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 header {
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+
   .navbar-default {
     box-shadow: 0 5px 100px black;
     background: black;
@@ -180,6 +190,8 @@ header {
     .navbar-brand {
       padding: 0;
       color: white !important;
+      position: absolute;
+      z-index: 100;
 
       img {
         margin: 0 10px;
@@ -193,10 +205,66 @@ header {
         font-weight: bold;
       }
     }
+
+  }
+  .menu-wrapper {
+    .menu-overlay {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .navbar-menu {
+      color: $main-color;
+      background: white;
+      width: 250px;
+      position: absolute;
+      top: 0;
+      height: 100vh;
+
+      .menu-header {
+        background: $main-color;
+        height: 100px;
+      }
+      .menu-items {
+        -webkit-padding-start: 0;
+        list-style-type: none;
+        background: white;
+        li {
+          font-size: 16px;
+          padding: 10px;
+
+          a {
+            color: #555;
+            &.active {
+              color: $main-color;
+            }
+            &:hover {
+              text-decoration: none;
+
+            }
+            .menu-icon {
+              font-size: 22px;
+              margin-right: 10px;
+            }
+            .menu-label {
+
+            }
+          }
+        }
+      }
+      .menu-footer {
+        position: fixed;
+        bottom: 0;
+        border-top: 1px solid lightgray;
+        width: 250px;
+        padding-top: 50px;
+      }
+    }
   }
 }
 
 div[ui-view] {
+  padding-top: 70px;
   position: relative;
 }
 
