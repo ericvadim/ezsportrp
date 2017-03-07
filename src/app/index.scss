@@ -261,6 +261,36 @@ header {
       }
     }
   }
+  .tabbar {
+    background: black;
+    text-align: center;
+    .tab {
+      padding: 5px;
+      &.active {
+        .tab-icon {
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          width: 100%;
+          background: #fddf96; /* Old browsers */
+          background: -moz-linear-gradient(top, #fddf96 0%, #be8500 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(top, #fddf96 0%, #be8500 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to bottom, #fddf96 0%, #be8500 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fddf96', endColorstr='#be8500', GradientType=0);
+        }
+      }
+      .tab-icon {
+
+      }
+      .tab-label {
+        padding: 0;
+        color: white;
+        font-stretch: semi-condensed;
+        font-weight: bold;
+      }
+
+    }
+  }
 }
 
 div[ui-view] {

@@ -66,6 +66,14 @@
         </div>
     </div>
 
+    <div class="container-fluid tabbar">
+        <div class="row margin-0">
+            <div class="col-xs-3 tab" ng-class="{'active': tab.active}" ng-repeat="tab in vm.tabs">
+                <div class="tab-icon">a<br>b<br></div>
+                <div class="tab-label">{{tab.label}}</div>
+            </div>
+        </div>
+    </div>
 </header>
 
 <div ui-view></div>
