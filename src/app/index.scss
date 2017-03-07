@@ -1,0 +1,241 @@
+/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+ */
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: "./../assets/fonts/bootstrap/";
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector
+
+html {
+  div, span, button, p, h1, h2, h3, h4, h5, h6, input {
+    &:active, &:focus {
+      outline: 0 !important;
+    }
+  }
+
+  .text-white {
+    color: white;
+  }
+
+  .text-black {
+    color: black;
+  }
+  .text-bold {
+    font-weight: bold;
+  }
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+  .text-contensed {
+    font-stretch: semi-condensed;
+  }
+
+  .margin-0 {
+    margin: 0;
+  }
+
+  .margin-20 {
+    margin: 20px;
+  }
+
+  .margin-top-20 {
+    margin-top: 20px;
+  }
+
+  .margin-bottom-20 {
+    margin-bottom: 20px;
+  }
+
+  .margin-left-20 {
+    margin-left: 20px;
+  }
+
+  .margin-right-20 {
+    margin-right: 20px;
+  }
+
+  .margin-top-40 {
+    margin-top: 40px;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+  .half-width {
+    width: 50%;
+  }
+  .float-left {
+    float: left;
+  }
+  .float-right {
+    float: right;
+  }
+  .position-absolute {
+    position: absolute;
+  }
+  .position-relative {
+    position: relative;
+  }
+}
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.background-shadow {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: url("./../assets/images/bg.jpg");
+  -moz-box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.7);
+}
+
+.number-pan-wrapper {
+  padding-left: 5px;
+  padding-right: 5px;
+
+  .number-pan {
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+
+    -moz-box-shadow: inset 5px 5px 15px rgba(255, 255, 255, .4), inset -5px -5px 15px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: inset 5px 5px 15px rgba(255, 255, 255, .4), inset -5px -5px 15px rgba(0, 0, 0, .4);
+    box-shadow: inset 5px 5px 15px rgba(255, 255, 255, .4), inset -5px -5px 15px rgba(0, 0, 0, .4);
+
+    .num {
+      background: white;
+      border: 2px solid black;
+      font-size: 50px;
+      font-weight: bold;
+      text-align: center;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      border-radius: 15px;
+      -moz-box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.7);
+      -webkit-box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.7);
+      box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.7);
+    }
+  }
+  hr {
+    width: calc(100% - 10px);
+    position: absolute;
+    top: 20%;
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+  }
+  .game-title {
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-stretch: semi-condensed;
+  }
+}
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+header {
+  .navbar-default {
+    box-shadow: 0 5px 100px black;
+    background: black;
+    padding: 10px 0;
+    margin-bottom: 0;
+    border: 0;
+
+    .navbar-toggle {
+      color: white;
+      background: #39501a;
+      border: 0;
+      font-size: 24px;
+      padding: 5px;
+      margin: 5px 10px;
+      padding-bottom: 0;
+      cursor: pointer;
+
+      &:focus, &:active, &:hover {
+        background: #39501a;
+      }
+
+      .icon-bar {
+        background: white;
+      }
+    }
+
+    .navbar-brand {
+      padding: 0;
+      color: white !important;
+
+      img {
+        margin: 0 10px;
+        width: 50px;
+        float: left;
+      }
+      span {
+        margin-top: 15px;
+        float: left;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+div[ui-view] {
+  position: relative;
+}
+
+.home-container {
+  .btn {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    width: 100%;
+    margin-top: 10px;
+    -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.7);
+    border: 1px solid black;
+    font-weight: bold;
+    font-stretch: semi-condensed;
+
+  }
+  .btn-start-game {
+    background: #00b100;
+    color: white;
+    font-size: 24px;
+    padding: 1px;
+  }
+  .btn-recent-results {
+    background: #febd00;
+    color: black;
+    font-size: 16px;
+    padding: 6px;
+  }
+  .team-img {
+    margin: auto;
+  }
+  .vs-txt {
+    top: 20%;
+    position: absolute;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+  }
+}
