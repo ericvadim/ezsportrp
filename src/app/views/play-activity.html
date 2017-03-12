@@ -1,0 +1,40 @@
+<div class="container-fluid play-activity-container">
+    <div class="row">
+        <div class="col-xs-12 activity-title">
+            Arsenal (my team) VS Spirit (away team)
+        </div>
+    </div>
+    <div class="row padding-left-20 padding-right-20 ">
+        <div class="col-xs-3 padding-10" ng-repeat="legend in vm.legends track by $index">
+            <div class="play-activity-legends">
+                {{legend.title1}}<br/>{{legend.title2}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-responsive table-none-border table-text-center text-white">
+                <thead class="shadow-effect-bottom">
+                <tr>
+                    <th>Time</th>
+                    <th>#</th>
+                    <th>Plyr</th>
+                    <th>Position</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="r in [1,1,1,1,1,1] track by $index">
+                    <td>00:00</td>
+                    <td>12</td>
+                    <td>Player1</td>
+                    <td>Mid-Fielder</td>
+                    <td>
+                        <div class="field-check">On</div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

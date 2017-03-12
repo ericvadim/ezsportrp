@@ -1,0 +1,37 @@
+<div class="container-fluid stats-container">
+    <div class="row padding-10">
+        <div class="col-xs-offset-2 col-xs-4">
+            <button class="btn btn-primary">TEAMS</button>
+        </div>
+        <div class="col-xs-4">
+            <button class="btn btn-warning">PLAYERS</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-responsive table-none-border table-text-center text-white">
+                <thead>
+                <tr>
+                    <th class="col-xs-8"></th>
+                    <th>PTS</th>
+                    <th>GW</th>
+                    <th>GL</th>
+                    <th>DIF</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="p in [1,2,3,4,5,6,7,8] track by $index">
+                    <td>
+                        <div class="player-avatar"></div>
+                        <div class="player-name">Player{{p}}</div>
+                    </td>
+                    <td><div class="margin-top-10">00</div></td>
+                    <td><div class="margin-top-10">00</div></td>
+                    <td><div class="margin-top-10">00</div></td>
+                    <td><div class="margin-top-10">+0</div></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container-fluid match-container">
+    <div class="row">
+        <div class="col-xs-12 shadow-effect-bottom">
+            <h4 class="text-white text-condensed text-center text-bold">THIS MONTH MATCHES</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="container-fluid">
+                <div class="row margin-top-15" ng-repeat="match in vm.matches track by $index">
+                    <div class="col-xs-5 padding-0">
+                        <div class="team-name float-right text-right">{{match.team1.name}}</div>
+                        <div class="team-image-wrapper float-left">
+                            <img class="team-image" ng-src="{{match.team1.image}}">
+                        </div>
+                    </div>
+                    <div class="col-xs-2 padding-0 text-center between-div">
+                        VS
+                    </div>
+                    <div class="col-xs-5 padding-0">
+                        <div class="team-name float-left text-left">{{match.team2.name}}</div>
+                        <div class="team-image-wrapper float-right">
+                            <img class="team-image" ng-src="{{match.team2.image}}">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 ymd-city">
+                        {{match.ymd}} - {{match.city}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

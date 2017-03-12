@@ -1,0 +1,21 @@
+<div class="container-fluid player-container">
+    <div class="row margin-top-15">
+        <div class="col-xs-5">
+            <img class="img-responsive" src="./assets/images/temp/player.jpg">
+        </div>
+        <div class="col-xs-7">
+            <h3 class="">{{vm.player.name}}</h3>
+            <img class="col-xs-4 padding-0 img-responsive" src="./assets/images/temp/team1.png">
+            <h4>{{vm.player.club}}</h4>
+            <h4>{{vm.player.city}}</h4>
+        </div>
+        <div class="col-xs-12 shadow-effect-bottom">
+            <h4>Age: {{vm.player.age}}</h4>
+            <h4>Height: {{vm.player.height}}</h4>
+            <h4>Weight: {{vm.player.weight}}</h4>
+        </div>
+        <div class="col-xs-12 padding-top-20 player-comment">
+            {{vm.player.comment}}
+        </div>
+    </div>
+</div>
