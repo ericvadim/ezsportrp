@@ -12,8 +12,8 @@
             {title: 'Schedule', icon: 'calendar', url: 'playActivity'},
             {title: 'Training', icon: 'road', url: 'player'},
             {title: 'Scrimmage', icon: 'list-alt', url: 'stats'},
-            {title: 'Matches', icon: 'random', url: ''},
-            {title: 'Announcements', icon: 'bullhorn', url: ''},
+            {title: 'Matches', icon: 'random', url: 'match'},
+            {title: 'Announcements', icon: 'bullhorn', url: 'game'},
             {title: 'Leaderboard', icon: 'th-list', url: ''}
         ];
 

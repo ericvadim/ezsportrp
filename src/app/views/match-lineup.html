@@ -1,5 +1,51 @@
 <div class="container-fluid match-lineup-container">
     <div class="row">
-        Match Line up page
+        <div class="col-xs-12">
+            <h2 class="text-center text-white text-bold text-uppercase text-condensed margin-top-40 margin-bottom-20">Game Today - 22 Jun</h2>
+        </div>
     </div>
+    <div class="row text-center position-relative">
+        <div class="col-xs-6">
+            <img class="team-img img-responsive" src="./assets/images/temp/team1.png">
+        </div>
+        <!--<div class="col-xs-2">VS</div>-->
+        <div class="col-xs-6">
+            <img class="team-img img-responsive" src="./assets/images/temp/team2.png">
+        </div>
+        <h2 class="vs-txt">VS</h2>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <h4 class="text-center text-bold text-white text-uppercase text-condensed">Team1</h4>
+        </div>
+        <div class="col-xs-6">
+            <h4 class="text-center text-bold text-white text-uppercase text-condensed">Team2</h4>
+        </div>
+        <div class="col-xs-12">
+            <h5 class="text-center text-bold text-white text-uppercase text-condensed">Maracana Stadium</h5>
+            <h5 class="text-center text-bold text-white text-uppercase text-condensed">DATE: OCT 24TH 2017 - STARTING TIME: 2PM</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-green btn-start-game">START GAME</button>
+        </div>
+    </div>
+    <div class="row margin-bottom-20">
+        <div class="col-md-12">
+            <button class="btn btn-yellow btn-recent-results">LINE UP</button>
+        </div>
+    </div>
+    <div class="row text-center text-white text-condensed" ng-repeat="p in vm.players track by $index">
+        <div class="col-xs-5">
+            <h4 class="text-right text-bold">{{p.team1}}</h4>
+        </div>
+        <div class="col-xs-2 padding-0">
+            <h4 class="text-center text-bold">{{p.role}}</h4>
+        </div>
+        <div class="col-xs-5">
+            <h4 class="text-left text-bold">{{p.team2}}</h4>
+        </div>
+    </div>
+    <div class="margin-top-20"></div>
 </div>

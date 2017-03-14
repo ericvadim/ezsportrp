@@ -1,5 +1,58 @@
 <div class="container-fluid game-container">
+    <!--<div class="players-wrapper margin-top-10">-->
     <div class="row">
-        Game
+        <div class="col-xs-11 col-xs-offset-1 left-decoration">
+            <div class="white-circle"></div>
+            <h4 class="text-white text-bold text-condensed text-uppercase">GAME TODAY-22 JUN</h4>
+            <div class="col-xs-3 padding-0">
+                <img class="team-image" ng-src="./assets/images/temp/team1.png">
+            </div>
+            <div class="col-xs-1 padding-0 text-center text-white">VS</div>
+            <div class="col-xs-3 padding-0">
+                <img class="team-image" ng-src="./assets/images/temp/team2.png">
+            </div>
+            <div class="col-xs-5 game-info">
+                <h5>Team1 - Team2</h5>
+                <h5>Maracana Stadium</h5>
+                <h5>5:00 PM</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" ng-repeat="player in vm.players">
+        <div class="col-xs-11 col-xs-offset-1 left-decoration">
+            <div class="white-circle"></div>
+            <h4 class="text-white text-bold text-condensed text-uppercase">{{player.title}}</h4>
+            <div class="col-xs-3 padding-0 margin-top-10">
+                <img class="img-responsive" ng-src="./assets/images/temp/player.jpg">
+            </div>
+            <div class="col-xs-9 text-white">
+                <h5>{{player.name}}</h5>
+                <h5>{{player.country}}</h5>
+                <h5>{{player.comment}}</h5>
+            </div>
+        </div>
+    </div>
+    <!--</div>-->
+    <div class="row margin-bottom-20">
+        <div class="col-md-12">
+            <button class="btn btn-yellow btn-recent-results">RECENT RESULTS</button>
+        </div>
+    </div>
+    <div class="row margin-bottom-20">
+        <div class="col-xs-12">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-4 number-pan-wrapper" ng-repeat="game in vm.games">
+                        <div class="number-pan">
+                            <div class="half-width float-left num">{{game.score.split('')[0]}}</div>
+                            <div class="half-width float-left num">{{game.score.split('')[1]}}</div>
+                        </div>
+                        <hr/>
+                        <div class="game-title">{{game.title}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
